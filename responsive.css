@@ -1,0 +1,69 @@
+@media only screen and (max-width:596px) {
+    nav div:nth-child(2) {
+        display: none !important;
+    }
+
+    .f-left h1 {
+        font-size: 50px;
+    }
+
+
+    .fourth-left img:nth-child(1) {
+        right: 70px;
+    }
+
+    .fourth-left img:nth-child(2) {
+        left: 70px;
+    }
+
+    .newletter {
+        height: 40%;
+    }
+
+    .newletter p {
+        font-size: 13px;
+    }
+
+    .newletter form {
+        width: 90%;
+        padding: 7px;
+    }
+
+    .newletter form input {
+        padding: 2px 4px;
+        font-size: 10px;
+    }
+
+    .newletter form button {
+        padding: 1px 2px;
+        font-size: 10px;
+    }
+
+    .footer {
+        height: 1150px;
+    }
+    .footer-box{
+        height: 85%;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .newletter {
+        width: 100%;
+        height: 40%;
+        left: 0;
+    }.newletter p {
+        font-size: 13px;
+    }
+    .newletter form {
+        width: 90%;
+        padding: 7px;
+    }
+
+    .footer {
+        height: 1150px;
+    }
+    .footer-box{
+        height: 85%;
+    }
+}
