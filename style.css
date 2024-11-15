@@ -23,6 +23,7 @@
 
 :root {
     --font: "Kode Mono", monospace;
+    --green: rgba(204,243,0,255);
 }
 
 .logo{
@@ -30,11 +31,13 @@
     font-size: 30px;
     font-family: var(--font);
 }
+
 nav li a{
     text-decoration: none;
     list-style: none;
     color: white;
     transition: .1s all linear;
+    font-family: var(--font);
     font-size: 18px;
 }
 nav li a:hover{
@@ -46,11 +49,17 @@ nav button{
     text-decoration: none;
     font-family: var(--font);
     padding: 10px 15px;
-    border: 1px solid rgba(204,243,0,255);
-}
-nav button a{
     color: rgba(204,243,0,255);
+    border: 1px solid rgba(204,243,0,255);
+    transition: .1s all linear;
 }
+nav button:hover {
+    color: black;
+    background-color: var(--green);
+    box-shadow: 0 0 10px rgba(204,243,0,255);
+    transition: .1s all linear;
+}
+
 
 .f-left h1{
     font-size: 70px;
@@ -65,10 +74,19 @@ nav button a{
     background-color: rgba(204,243,0,255);
     padding: 10px 15px;
     color: rgba(3,11,17,255);
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(204,243,0,255);
     font-family: var(--font);
+    transition: .1s all linear;
 }
+.f-btn button:nth-child(1):hover {
+    background-color: transparent;
+    color: rgba(204,243,0,255);
+    border: 1px solid rgba(204,243,0,255);
+    box-shadow: none;
+    transition: .1s all linear;
+}
+
 .f-btn button:nth-child(2) {
     background-color: transparent;
     color: rgba(204,243,0,255);
@@ -76,10 +94,29 @@ nav button a{
     font-family: var(--font);
     padding: 10px 15px;
     border: 1px solid rgba(204,243,0,255);
+    transition: .1s all linear;
+}
+.f-btn button:nth-child(2):hover {
+    background-color: var(--green);
+    box-shadow: 0 0 10px var(--green);
+    color: black;
+    transition: .1s all linear;
 }
 
 .f-right img{
     filter: drop-shadow(0 0 120px rgba(204,243,0,255));
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        /* transform: rotateY(0deg); */
+        transform: rotate(0);
+    }
+    100%{
+        /* transform: rotateY(360deg); */
+        transform: rotate(360deg);    
+    }
 }
 
 .s-header{
@@ -88,7 +125,7 @@ nav button a{
 }
 
 .product{
-    width: 650px !important;
+    width: 650px;
     height: 250px;
     /* background-color: rgb(8, 18, 26); */
 }
@@ -149,10 +186,12 @@ nav button a{
     text-align: center;
 }
 
+
 .T-slider-1{
     position: relative;
     overflow: hidden;
 }
+
 
 .T-slider-track-1{
     display: flex;
@@ -347,9 +386,17 @@ nav button a{
     background-color: rgba(204,243,0,255);
     padding: 10px 15px;
     color: rgba(3,11,17,255);
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(204,243,0,255);
     font-family: var(--font);
+    transition: .1s all linear;
+}
+.t-section button:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--green);
+    border: 1px solid var(--green);
+    transition: .1s all linear;
 }
 
 .fourth-section{
@@ -359,6 +406,7 @@ nav button a{
 .fourth-left{
     height: 400px;
     position: relative;
+    
 }
 
 .fourth-left img:nth-child(1){
@@ -374,25 +422,37 @@ nav button a{
     position: absolute;
     left: 100px;
     top: -10px;
+
 }
 
 .fourth-right h1{
     font-size: 50px;
     color: white;
     font-family: var(--font);
+    
 }
 .fourth-right p{
     color: white;
+    
 }
 
 .fourth-btn button{
     background-color: rgba(204,243,0,255);
     padding: 10px 15px;
     color: rgba(3,11,17,255);
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(204,243,0,255);
     font-family: var(--font);
+    
 }
+.fourth-btn button:hover{
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--green);
+    border: 1px solid var(--green);
+    transition: .1s all linear;
+}
+
 .fourth-btn span{
     background-color: transparent;
     color: rgba(204,243,0,255);
@@ -403,8 +463,17 @@ nav button a{
     gap: 10px;
     font-family: var(--font);
     padding: 10px 15px;
-    border: none;
+    border: 1px solid transparent;
+    transition: .1s all linear;
 }
+.fourth-btn span:hover {    
+    border: 1px solid var(--green);
+    transition: .1s all linear;
+    background-color: var(--green);
+    color: black;
+    box-shadow: 0 0 10px var(--green);
+}
+
 .fourth-btn span i{
     font-size: 25px;
 }
@@ -440,6 +509,7 @@ nav button a{
     border: none;
     padding: 10px 10px;
     text-decoration: none;
+    font-family: var(--font);
     outline: none;
     background-color: transparent;
 }
@@ -447,9 +517,17 @@ nav button a{
     background-color: rgba(204,243,0,255);
     padding: 10px 20px;
     color: rgba(3,11,17,255);
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(204,243,0,255);
     font-family: var(--font);
+    transition: .1s all linear;
+}
+.newletter form button:hover {
+    background-color: transparent;
+    transition: .1s all linear;
+    box-shadow: none;
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
 
@@ -458,7 +536,7 @@ nav button a{
     position: relative;
     margin-top: 300px;
     z-index: 1;
-    background-image: url(footer-bg.jpg);
+    background-image: url(footer-bg-2.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -479,7 +557,6 @@ nav button a{
     height: 50%;
     display: flex;
     flex-direction: column;
-    align-items: end;
     align-items: end;
 }
 .footer-box hr{

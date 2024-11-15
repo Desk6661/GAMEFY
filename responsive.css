@@ -1,3 +1,14 @@
+@media only screen and (max-width:450px) {
+    .fourth-left img:nth-child(1){
+        right: 50px !important;
+    }
+    .fourth-left img:nth-child(2){
+        left: 50px !important;
+    }
+}
+
+
+
 @media only screen and (max-width:596px) {
     nav div:nth-child(2) {
         display: none !important;
